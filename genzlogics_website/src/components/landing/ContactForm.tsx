@@ -49,7 +49,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6 animate-fade-up delay-2">
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="space-y-2">
           <span className="text-sm font-medium text-slate-900">Name</span>

@@ -6,7 +6,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="mt-16 border-t border-slate-200 bg-white py-12 text-slate-600">
+    <footer className="mt-16 border-t border-slate-200 bg-white py-12 text-slate-600 animate-fade-up delay-5">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 sm:px-10 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
         <div>
           <p className="text-sm uppercase tracking-[0.28em] text-slate-500">GenZLogics</p>

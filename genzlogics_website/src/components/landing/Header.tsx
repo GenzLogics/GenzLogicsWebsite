@@ -15,7 +15,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="mb-6 rounded-[2rem] border border-slate-200 bg-white px-5 py-5 shadow-sm sm:px-8 sm:py-6">
+    <header className="mb-6 rounded-[2rem] border border-slate-200 bg-white px-5 py-5 shadow-sm sm:px-8 sm:py-6 animate-fade-up delay-1">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6">
         <div className="flex items-center gap-3">
           <Image
