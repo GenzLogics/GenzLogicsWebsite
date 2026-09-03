@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GenZLogics | IT & Digital Solutions",
+  title: "GenZLogics | Software & Digital Solutions",
   description:
-    "GenZLogics delivers end-to-end technology and digital marketing solutions, helping businesses grow, scale, and compete globally.",
+    "GenZLogics is a software company that builds solutions for all kinds of business problems — from AI and automation to web, mobile, cloud, and digital marketing.",
   metadataBase: new URL("https://genzlogics.com"),
 };
 

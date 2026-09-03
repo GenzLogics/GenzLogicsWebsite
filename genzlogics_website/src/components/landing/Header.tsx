@@ -7,7 +7,6 @@ const navItems = [
   { label: "Services", href: "#services" },
   { label: "Approach", href: "#approach" },
   { label: "About", href: "#about" },
-  { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -23,6 +22,7 @@ export default function Header() {
             alt="GenZLogics logo"
             width={56}
             height={56}
+            loading="eager"
             className="rounded-2xl object-cover"
           />
           <div>

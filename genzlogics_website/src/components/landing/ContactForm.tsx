@@ -2,9 +2,30 @@
 
 import { useState } from "react";
 
+const serviceOptions = [
+  { value: "", label: "Select a service" },
+  { value: "ai-ml", label: "AI/ML Engineering" },
+  { value: "generative-ai", label: "Generative AI / LLM Applications" },
+  { value: "ai-automation", label: "AI Automation & Workflows" },
+  { value: "ai-agents", label: "AI Agents" },
+  { value: "rag-vector", label: "RAG / Vector Database Apps" },
+  { value: "fastapi", label: "FastAPI Backend Development" },
+  { value: "python", label: "Python Development" },
+  { value: "web-dev", label: "Web Development" },
+  { value: "mobile-dev", label: "Mobile App Development" },
+  { value: "desktop-dev", label: "Desktop Applications" },
+  { value: "cloud-devops", label: "Cloud / DevOps" },
+  { value: "ui-ux", label: "UI/UX Design" },
+  { value: "digital-marketing", label: "Digital Marketing" },
+  { value: "branding", label: "Branding & Design" },
+  { value: "consulting", label: "IT Consulting" },
+  { value: "other", label: "Other" },
+];
+
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [service, setService] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -18,7 +39,7 @@ export default function ContactForm() {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !service || !message) {
       setError("Please complete all fields.");
       return;
     }
@@ -30,15 +51,17 @@ export default function ContactForm() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify({ name, email, service, message }),
       });
 
       if (!response.ok) {
-        throw new Error("Submission failed.");
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error || "Submission failed.");
       }
 
       setName("");
       setEmail("");
+      setService("");
       setMessage("");
       setSubmitted(true);
     } catch (error) {
@@ -62,6 +85,7 @@ export default function ContactForm() {
             className="w-full rounded-3xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 focus:border-slate-400 focus:outline-none"
             type="text"
             placeholder="Your name"
+            required
           />
         </label>
         <label className="space-y-2">
@@ -75,9 +99,28 @@ export default function ContactForm() {
             className="w-full rounded-3xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 focus:border-slate-400 focus:outline-none"
             type="email"
             placeholder="you@example.com"
+            required
           />
         </label>
       </div>
+      <label className="space-y-2">
+        <span className="text-sm font-medium text-slate-900">What do you need?</span>
+        <select
+          value={service}
+          onChange={(event) => {
+            resetStatus();
+            setService(event.target.value);
+          }}
+          className="w-full rounded-3xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 focus:border-slate-400 focus:outline-none"
+          required
+        >
+          {serviceOptions.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </label>
       <label className="space-y-2">
         <span className="text-sm font-medium text-slate-900">Message</span>
         <textarea
@@ -87,7 +130,8 @@ export default function ContactForm() {
             setMessage(event.target.value);
           }}
           className="min-h-[170px] w-full rounded-3xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 focus:border-slate-400 focus:outline-none"
-          placeholder="Tell us about your project"
+          placeholder="Tell us about your project, timeline, and budget."
+          required
         />
       </label>
       {error ? <p className="text-sm text-rose-500">{error}</p> : null}

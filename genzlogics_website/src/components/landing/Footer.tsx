@@ -1,7 +1,8 @@
 const socialLinks = [
-  { label: "LinkedIn", href: "https://linkedin.com/company/genzlogics" },
-  { label: "Twitter", href: "https://twitter.com/genzlogics" },
-  { label: "Instagram", href: "https://instagram.com/genzlogics" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/genzlogics" },
+  { label: "Instagram", href: "https://www.instagram.com/genzlogicsofficial/" },
+  { label: "Facebook", href: "https://www.facebook.com/genzlogics/" },
+  { label: "Thread", href: "https://www.threads.com/@genzlogicsofficial" },
 ];
 
 export default function Footer() {
@@ -11,17 +12,18 @@ export default function Footer() {
         <div>
           <p className="text-sm uppercase tracking-[0.28em] text-slate-500">GenZLogics</p>
           <p className="mt-4 max-w-sm text-slate-600">
-            End-to-end IT, digital product, and growth services for brands that want to scale globally.
+            Python and AI engineering services. I build production-ready applications and automation workflows for businesses.
           </p>
         </div>
 
         <div>
           <p className="text-sm uppercase tracking-[0.28em] text-slate-500">Services</p>
           <ul className="mt-4 space-y-3 text-sm">
-            <li>Software development</li>
-            <li>Design & branding</li>
-            <li>Marketing & social media</li>
-            <li>Product strategy</li>
+            <li>AI/ML Engineering</li>
+            <li>Generative AI / LLM Apps</li>
+            <li>AI Automation & Workflows</li>
+            <li>Python / FastAPI Backend</li>
+            <li>Web & Mobile Development</li>
           </ul>
         </div>
 
@@ -31,8 +33,7 @@ export default function Footer() {
             <a href="mailto:contact@genzlogics.com" className="block text-slate-700 hover:text-slate-950">
               contact@genzlogics.com
             </a>
-            <p>+1 234 567 890</p>
-            <p>123 Innovation Avenue, Bangalore, India</p>
+            <p>+92 3174680971</p>
           </div>
         </div>
 
@@ -48,7 +49,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="mx-auto mt-10 max-w-7xl px-6 sm:px-10 text-sm text-slate-500">
-        <p>© 2026 GenZLogics. Built for modern IT, software, and digital marketing teams.</p>
+        <p>© 2026 GenZLogics. Built by Muhammad Aqeel.</p>
       </div>
     </footer>
   );
