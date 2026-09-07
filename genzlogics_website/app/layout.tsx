@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ScrollReveal from "@/src/components/site/ScrollReveal";
 
 export const metadata: Metadata = {
   title: { default: "GenZLogics | Software & AI Solutions", template: "%s | GenZLogics" },
@@ -8,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" className="h-full antialiased"><body className="min-h-full">{children}</body></html>;
+  return <html lang="en" className="h-full antialiased"><body className="min-h-full"><ScrollReveal />{children}</body></html>;
 }

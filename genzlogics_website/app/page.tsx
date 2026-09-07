@@ -10,7 +10,7 @@ const services = [
 
 const metrics = [
   ["5+", "Years building digital products"],
-  ["20+", "Projects delivered across SaaS and AI"],
+  ["11+", "Projects delivered across SaaS and AI"],
   ["99%", "Focus on outcome, clarity, and speed"],
 ];
 
@@ -32,7 +32,7 @@ export default function Home() {
     <PageShell>
       <section className="border-b border-slate-200 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-          <div className="grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr]">
+          <div className="max-w-4xl">
             <div className="reveal">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">Software development & AI solutions</p>
               <h1 className="mt-6 max-w-xl text-5xl font-semibold tracking-[-0.06em] text-slate-950 sm:text-6xl lg:text-[5rem] leading-[0.92]">
@@ -60,52 +60,6 @@ export default function Home() {
                 ))}
               </div>
             </div>
-
-            <div className="reveal">
-              <div className="mx-auto max-w-lg rounded-[2rem] border border-slate-200 bg-slate-50 p-4 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
-                <div className="rounded-[1.4rem] border border-slate-200 bg-white p-5">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-slate-500">Operational overview</p>
-                      <h2 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">Product system</h2>
-                    </div>
-                    <span className="rounded-full bg-emerald-100 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald-700">Live</span>
-                  </div>
-
-                  <div className="mt-6 space-y-4">
-                    {[
-                      ["AI workflows", "72% automation gain"],
-                      ["Web products", "14 launches this year"],
-                      ["Cloud infrastructure", "99.9% uptime focus"],
-                    ].map(([label, value]) => (
-                      <div key={label} className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                        <div className="flex items-center justify-between gap-4">
-                          <div>
-                            <p className="text-xs uppercase tracking-[0.18em] text-slate-400">{label}</p>
-                            <p className="mt-2 text-lg font-semibold text-slate-950">{value}</p>
-                          </div>
-                          <div className="h-10 w-10 rounded-full border border-slate-200 bg-white p-2">
-                            <div className="h-full w-full rounded-full bg-gradient-to-br from-brand-green to-emerald-300" />
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="mt-6 rounded-2xl bg-slate-950 p-4 text-white">
-                    <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.2em] text-slate-400">
-                      <span>Delivery flow</span>
-                      <span>Q3</span>
-                    </div>
-                    <div className="mt-5 flex items-end gap-2">
-                      {[42, 56, 70, 88, 64, 90].map((height, index) => (
-                        <div key={height} className="flex-1 rounded-t-xl bg-gradient-to-t from-brand-green to-emerald-300/80" style={{ height: `${height}px`, opacity: 0.56 + index * 0.07 }} />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -119,7 +73,7 @@ export default function Home() {
 
           <div className="mt-12 grid gap-5 md:grid-cols-2">
             {services.map(([title, desc], index) => (
-              <article key={title} className="group rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-[0_12px_30px_rgba(15,23,42,0.04)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,23,42,0.08)] reveal" style={{ animationDelay: `${index * 120}ms` }}>
+              <Link key={title} href="/services" className="group block rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-[0_12px_30px_rgba(15,23,42,0.04)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,23,42,0.08)] reveal" style={{ animationDelay: `${index * 120}ms` }}>
                 <div className="flex items-center justify-between gap-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">0{index + 1}</p>
                   <span className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-100 text-slate-300 transition-all duration-300 group-hover:scale-105 group-hover:border-brand-green/30 group-hover:bg-brand-green group-hover:text-white">
@@ -128,10 +82,10 @@ export default function Home() {
                 </div>
                 <h3 className="mt-10 text-2xl font-semibold tracking-tight text-slate-950">{title}</h3>
                 <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600">{desc}</p>
-                <Link href="/services" className="mt-8 inline-flex items-center text-sm font-semibold text-slate-950">
+                <span className="mt-8 inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-950 transition group-hover:border-brand-green/30 group-hover:bg-brand-green group-hover:text-white">
                   Learn more <span className="ml-2 transition group-hover:translate-x-1">→</span>
-                </Link>
-              </article>
+                </span>
+              </Link>
             ))}
           </div>
         </div>
@@ -165,14 +119,18 @@ export default function Home() {
 
       <section className="bg-slate-950 text-white">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <div className="reveal max-w-3xl">
+          <div className="reveal max-w-3xl" style={{ animationDelay: "80ms" }}>
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">How we work</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">A clear process from idea to launch.</h2>
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {process.map(([step, title, text]) => (
-              <div key={step} className="rounded-[1.5rem] border border-slate-800 bg-slate-900/60 p-5 transition hover:border-slate-700 hover:bg-slate-900 reveal">
+              <div
+                key={step}
+                className="rounded-[1.5rem] border border-slate-800 bg-slate-900/60 p-5 transition duration-500 hover:-translate-y-1 hover:border-slate-700 hover:bg-slate-900 hover:shadow-[0_18px_36px_rgba(0,0,0,0.22)] reveal"
+                style={{ animationDelay: `${220 + Number(step) * 120}ms` }}
+              >
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">{step}</p>
                 <h3 className="mt-8 text-2xl font-semibold text-white">{title}</h3>
                 <p className="mt-4 text-sm leading-7 text-slate-300">{text}</p>
