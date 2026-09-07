@@ -55,9 +55,49 @@ const projects = [
     status: "completed",
     company: "Prograsec",
   },
+  {
+    title: "AqeelMart",
+    category: "Web App / E-Commerce",
+    description:
+      "Django e-commerce platform with product catalog, category filtering, search, contact form with email, order placement, and order tracking by ID.",
+    tech: ["Django", "Python", "SQLite", "HTML", "CSS", "JavaScript"],
+    tags: ["Web App", "E-Commerce", "Personal Project"],
+    status: "completed",
+    company: "Practice Project",
+  },
+  {
+    title: "ICoder Blog",
+    category: "Web App / Blog",
+    description:
+      "Django blog platform with user authentication, post creation, nested comments, search, and contact form.",
+    tech: ["Django", "Python", "SQLite", "HTML", "CSS", "JavaScript"],
+    tags: ["Web App", "Blog", "Personal Project"],
+    status: "completed",
+    company: "Practice Project",
+  },
+  {
+    title: "Mart Products / E-Commerce Platform",
+    category: "Web App / E-Commerce",
+    description:
+      "FastAPI microservices-based e-commerce backend with product, user, auth, and order services, containerized with Docker and paired with a Next.js storefront.",
+    tech: ["FastAPI", "Python", "Docker", "Next.js", "Kafka"],
+    tags: ["Web App", "E-Commerce", "Microservices", "Personal Project"],
+    status: "completed",
+    company: "Practice Project",
+  },
+  {
+    title: "Gym Fitness App",
+    category: "Mobile App / Flutter",
+    description:
+      "Flutter fitness app with Firebase auth and Firestore, featuring multiple calculators and dedicated screens for classes and trainers.",
+    tech: ["Flutter", "Dart", "Firebase", "Cloud Firestore", "Firebase Auth"],
+    tags: ["Mobile App", "Flutter", "Personal Project"],
+    status: "completed",
+    company: "National Textile University",
+  },
 ];
 
-const filters = ["All", "AI", "Web App", "SaaS", "Mobile App", "Automation", "Custom Software"];
+const filters = ["All", "AI", "Web App", "SaaS", "Mobile App", "Automation", "Custom Software", "Personal Project"];
 
 const statusStyles: Record<string, string> = {
   completed: "bg-emerald-50 text-emerald-700 border-emerald-200",
