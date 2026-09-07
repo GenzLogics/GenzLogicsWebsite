@@ -4,21 +4,14 @@ import { useState } from "react";
 
 const serviceOptions = [
   { value: "", label: "Select a service" },
-  { value: "ai-ml", label: "AI/ML Engineering" },
-  { value: "generative-ai", label: "Generative AI / LLM Applications" },
-  { value: "ai-automation", label: "AI Automation & Workflows" },
-  { value: "ai-agents", label: "AI Agents" },
-  { value: "rag-vector", label: "RAG / Vector Database Apps" },
-  { value: "fastapi", label: "FastAPI Backend Development" },
-  { value: "python", label: "Python Development" },
-  { value: "web-dev", label: "Web Development" },
-  { value: "mobile-dev", label: "Mobile App Development" },
-  { value: "desktop-dev", label: "Desktop Applications" },
+  { value: "ai-generative", label: "AI & Generative AI" },
+  { value: "ai-automation", label: "AI Automation" },
+  { value: "custom-software", label: "Custom Software" },
+  { value: "web-development", label: "Web Development" },
+  { value: "mobile-development", label: "Mobile Development" },
   { value: "cloud-devops", label: "Cloud / DevOps" },
-  { value: "ui-ux", label: "UI/UX Design" },
-  { value: "digital-marketing", label: "Digital Marketing" },
-  { value: "branding", label: "Branding & Design" },
-  { value: "consulting", label: "IT Consulting" },
+  { value: "python-fastapi", label: "Python & FastAPI" },
+  { value: "ui-ux-design", label: "UI/UX & Product Design" },
   { value: "other", label: "Other" },
 ];
 
@@ -143,7 +136,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white transition disabled:cursor-not-allowed disabled:opacity-60"
+        className="inline-flex items-center justify-center rounded-full bg-brand-green px-6 py-3 text-sm font-semibold text-white transition disabled:cursor-not-allowed disabled:opacity-60"
       >
         {isSubmitting ? "Sending..." : "Send message"}
       </button>

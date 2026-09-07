@@ -30,8 +30,8 @@ export default function Footer() {
         <div>
           <p className="text-sm uppercase tracking-[0.28em] text-slate-500">Contact</p>
           <div className="mt-4 space-y-3 text-sm">
-            <a href="mailto:contact@genzlogics.com" className="block text-slate-700 hover:text-slate-950">
-              contact@genzlogics.com
+            <a href="mailto:genzlogicsofficial@gmail.com" className="block text-slate-700 hover:text-slate-950">
+              genzlogicsofficial@gmail.com
             </a>
             <p>+92 3174680971</p>
           </div>

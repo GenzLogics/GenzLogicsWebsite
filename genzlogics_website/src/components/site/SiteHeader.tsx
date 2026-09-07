@@ -7,6 +7,7 @@ import { useState } from "react";
 const navItems = [
   { label: "Services", href: "/services" },
   { label: "Solutions", href: "/solutions" },
+  { label: "Projects", href: "/projects" },
   { label: "Work", href: "/work" },
   { label: "About", href: "/about" },
 ];
@@ -20,7 +21,7 @@ export default function SiteHeader() {
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <Image src="/logo.jpeg" alt="GenZLogics" width={42} height={42} className="rounded-xl object-cover" priority />
           <div className="leading-none">
-            <span className="block text-base font-bold tracking-tight text-slate-950">GenZLogics</span>
+            <span className="block text-base font-bold tracking-tight text-brand-black">GenZLogics</span>
             <span className="mt-1 block text-[10px] font-medium uppercase tracking-[0.18em] text-slate-500">Software & Digital</span>
           </div>
         </Link>
@@ -33,7 +34,7 @@ export default function SiteHeader() {
           ))}
         </nav>
 
-        <Link href="/contact" className="hidden rounded-full bg-slate-950 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800 md:inline-flex">
+        <Link href="/contact" className="hidden rounded-full bg-brand-green px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#097a2e] md:inline-flex">
           Start a project
         </Link>
 
@@ -50,7 +51,7 @@ export default function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            <Link href="/contact" onClick={() => setOpen(false)} className="mt-2 block rounded-xl bg-slate-950 px-3 py-3 text-center text-sm font-semibold text-white">
+            <Link href="/contact" onClick={() => setOpen(false)} className="mt-2 block rounded-xl bg-brand-green px-3 py-3 text-center text-sm font-semibold text-white">
               Start a project
             </Link>
           </nav>

@@ -8,12 +8,12 @@ const columns = [
 
 export default function SiteFooter() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-950 text-slate-300">
+    <footer className="border-t border-slate-200 bg-brand-black text-slate-300">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 sm:grid-cols-2 lg:grid-cols-[1.5fr_repeat(3,1fr)] lg:px-8">
         <div>
           <Link href="/" className="text-xl font-bold tracking-tight text-white">GenZLogics</Link>
           <p className="mt-4 max-w-sm text-sm leading-6 text-slate-400">We design and build practical software, AI systems, and digital products that help businesses move forward.</p>
-          <a href="mailto:contact@genzlogics.com" className="mt-6 inline-block text-sm font-medium text-white hover:underline">contact@genzlogics.com</a>
+          <a href="mailto:genzlogicsofficial@gmail.com" className="mt-6 inline-block text-sm font-medium text-white hover:underline">genzlogicsofficial@gmail.com</a>
         </div>
         {columns.map((column) => (
           <div key={column.title}>
