@@ -19,7 +19,7 @@ export default function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <Image src="/logo.jpeg" alt="GenZLogics" width={42} height={42} className="rounded-xl object-cover" priority />
+          <Image src="/logo.jpeg" alt="GenZLogics" width={42} height={42} className="rounded-xl object-contain" priority unoptimized />
           <div className="leading-none">
             <span className="block text-base font-bold tracking-tight text-brand-black">GenZLogics</span>
             <span className="mt-1 block text-[10px] font-medium uppercase tracking-[0.18em] text-slate-500">Software & Digital</span>
