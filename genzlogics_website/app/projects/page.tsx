@@ -140,7 +140,9 @@ const projects = [
 
 const filters = ["All", "AI", "Web App", "Mobile App", "Custom Software"];
 
-function ProjectCard({ project }) {
+type Project = (typeof projects)[number];
+
+function ProjectCard({ project }: { project: Project }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [imgError, setImgError] = useState(false);
   const [isImageOpen, setIsImageOpen] = useState(false);

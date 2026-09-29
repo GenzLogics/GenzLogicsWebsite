@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const columns = [
-  { title: "Company", links: [["About", "/about"], ["Work", "/work"], ["Contact", "/contact"]] },
+  { title: "Company", links: [["About", "/about"], ["Projects", "/projects"], ["Contact", "/contact"]] },
   { title: "Services", links: [["AI & Automation", "/services"], ["Software Development", "/services"], ["Cloud & DevOps", "/services"]] },
   { title: "Solutions", links: [["Startups", "/solutions"], ["Business Systems", "/solutions"], ["AI Products", "/solutions"]] },
 ];
