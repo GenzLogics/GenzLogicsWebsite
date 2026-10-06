@@ -53,6 +53,7 @@ const projects = [
     status: "completed",
   },
   */
+  /*
   {
     img: "/assets/project1/one.png",
     title: "Cause System",
@@ -64,6 +65,8 @@ const projects = [
     tags: ["AI", "SaaS", "Web App", "Chatbot"],
     status: "completed",
   },
+  */
+  /*
   {
     img: "/assets/project2/one.png",
     title: "Cause News",
@@ -75,6 +78,8 @@ const projects = [
     tags: ["AI", "Web App", "RAG", "Fact Checking"],
     status: "completed",
   },
+  */
+  /*
   {
     img: "/assets/project3/one.png",
     title: "NutriHygiene",
@@ -86,6 +91,7 @@ const projects = [
     tags: ["AI", "Mobile App", "Nutrition", "Python"],
     status: "completed",
   },
+  */
   {
     img: "/assets/project5/one.jpeg",
     title: "LedgerFlow",
