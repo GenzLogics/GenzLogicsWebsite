@@ -12,12 +12,12 @@ export default function SolutionsPage() {
     <PageShell>
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-24">
         <div className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Solutions</p>
-          <h1 className="mt-6 text-4xl font-semibold tracking-[-0.06em] text-slate-950 sm:text-5xl lg:text-6xl">
+          <p className="reveal text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Solutions</p>
+          <h1 className="reveal reveal-d1 mt-6 text-4xl font-semibold tracking-[-0.06em] text-slate-950 sm:text-5xl lg:text-6xl">
             Technology that fits the way your business actually works.
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600">
-            We don’t start with the fanciest stack. We start with the problem, workflow, and outcome, then design the smallest useful solution around them.
+          <p className="reveal reveal-d2 mt-7 max-w-2xl text-lg leading-8 text-slate-600">
+            We don't start with the fanciest stack. We start with the problem, workflow, and outcome, then design the smallest useful solution around them.
           </p>
         </div>
 

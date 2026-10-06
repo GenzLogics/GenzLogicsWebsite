@@ -9,8 +9,8 @@ const services = [
 ];
 
 const metrics = [
-  ["5+", "Years building digital products"],
-  ["11+", "Projects delivered across SaaS and AI"],
+  ["1+", "Years building digital products"],
+  ["5+", "Projects delivered across SaaS and AI"],
   ["99%", "Focus on outcome, clarity, and speed"],
 ];
 
@@ -30,40 +30,42 @@ const results = [
 export default function Home() {
   return (
     <PageShell>
+      {/* ── Hero ── */}
       <section className="border-b border-slate-200 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
           <div className="max-w-4xl">
-            <div className="reveal">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">Software development & AI solutions</p>
-              <h1 className="mt-6 max-w-xl text-5xl font-semibold tracking-[-0.06em] text-slate-950 sm:text-6xl lg:text-[5rem] leading-[0.92]">
-                We build software that moves your business forward.
-              </h1>
-              <p className="mt-7 max-w-xl text-lg leading-8 text-slate-600">
-                GenZLogics helps startups and businesses turn ideas, manual processes, and technical problems into useful digital products and AI-powered systems.
-              </p>
+            <p className="reveal text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">
+              Software development &amp; AI solutions
+            </p>
+            <h1 className="reveal reveal-d1 mt-6 max-w-xl text-5xl font-semibold tracking-[-0.06em] text-slate-950 sm:text-6xl lg:text-[5rem] leading-[0.92]">
+              We build software that moves your business forward.
+            </h1>
+            <p className="reveal reveal-d2 mt-7 max-w-xl text-lg leading-8 text-slate-600">
+              GenZLogics helps startups and businesses turn ideas, manual processes, and technical problems into useful digital products and AI-powered systems.
+            </p>
 
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <Link href="/contact" className="rounded-full bg-brand-green px-6 py-3 text-center text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#0a7b35]">
-                  Start a project
-                </Link>
-                <Link href="/services" className="rounded-full border border-slate-300 bg-white px-6 py-3 text-center text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-slate-50">
-                  Explore services
-                </Link>
-              </div>
+            <div className="reveal reveal-d3 mt-9 flex flex-col gap-3 sm:flex-row">
+              <Link href="/contact" className="rounded-full bg-brand-green px-6 py-3 text-center text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#0a7b35]">
+                Start a project
+              </Link>
+              <Link href="/services" className="rounded-full border border-slate-300 bg-white px-6 py-3 text-center text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-slate-50">
+                Explore services
+              </Link>
+            </div>
 
-              <div className="mt-12 grid gap-4 sm:grid-cols-3">
-                {metrics.map(([value, label]) => (
-                  <div key={label} className="rounded-[1.2rem] border border-slate-200 bg-slate-50 px-4 py-4">
-                    <div className="text-xl font-semibold tracking-tight text-slate-950">{value}</div>
-                    <div className="mt-2 text-xs leading-5 text-slate-600">{label}</div>
-                  </div>
-                ))}
-              </div>
+            <div className="reveal reveal-d4 mt-12 grid gap-4 sm:grid-cols-3">
+              {metrics.map(([value, label]) => (
+                <div key={label} className="rounded-[1.2rem] border border-slate-200 bg-slate-50 px-4 py-4">
+                  <div className="text-xl font-semibold tracking-tight text-slate-950">{value}</div>
+                  <div className="mt-2 text-xs leading-5 text-slate-600">{label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
+      {/* ── Services ── */}
       <section className="bg-slate-50">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="max-w-2xl reveal">
@@ -91,6 +93,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Why us ── */}
       <section className="bg-white">
         <div className="mx-auto grid max-w-7xl gap-14 px-6 py-20 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
           <div className="reveal">
@@ -117,6 +120,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Process ── */}
       <section className="bg-slate-950 text-white">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="reveal max-w-3xl" style={{ animationDelay: "80ms" }}>
@@ -140,12 +144,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── CTA ── */}
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-8 sm:p-10 lg:p-14 reveal">
             <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-2xl">
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">Let’s build</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">Let's build</p>
                 <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
                   Have a problem worth solving?
                 </h2>

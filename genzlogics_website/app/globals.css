@@ -56,6 +56,7 @@ button, input, select, textarea {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
 }
 
 .reveal.visible {
@@ -223,4 +224,43 @@ button, input, select, textarea {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }
 }
+
+/* ── Reveal stagger helpers ── */
+.reveal-d1 { transition-delay: 80ms; }
+.reveal-d2 { transition-delay: 180ms; }
+.reveal-d3 { transition-delay: 280ms; }
+.reveal-d4 { transition-delay: 380ms; }
+
+/* ── Page-level view transitions ── */
+@keyframes page-fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes page-fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+::view-transition-old(root) {
+  animation: 120ms ease-in both page-fade-out;
+}
+::view-transition-new(root) {
+  animation: 180ms ease-out 100ms both page-fade-in;
+}
+
+/* ── Keep header stable during page transitions ── */
+::view-transition-group(site-header) {
+  animation: none;
+  z-index: 100;
+}
+::view-transition-old(site-header) { display: none; }
+::view-transition-new(site-header) { animation: none; }
+
+

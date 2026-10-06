@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navItems = [
   { label: "Services", href: "/services" },
@@ -13,15 +13,29 @@ const navItems = [
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
+    <header
+      style={{ viewTransitionName: "site-header" }}
+      className={`sticky top-0 z-50 border-b transition-all duration-300 ${
+        scrolled
+          ? "border-slate-200 bg-white/98 shadow-[0_4px_24px_rgba(15,23,42,0.08)] backdrop-blur-md"
+          : "border-slate-200/80 bg-white/95 backdrop-blur"
+      }`}
+    >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <Image src="/logo.jpeg" alt="GenZLogics" width={42} height={42} className="rounded-xl object-contain" priority unoptimized />
           <div className="leading-none">
             <span className="block text-base font-bold tracking-tight text-brand-black">GenZLogics</span>
-            <span className="mt-1 block text-[10px] font-medium uppercase tracking-[0.18em] text-slate-500">Software & Digital</span>
+            <span className="mt-1 block text-[10px] font-medium uppercase tracking-[0.18em] text-slate-500">Software &amp; Digital</span>
           </div>
         </Link>
 
@@ -33,11 +47,20 @@ export default function SiteHeader() {
           ))}
         </nav>
 
-        <Link href="/contact" className="hidden rounded-full bg-brand-green px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#097a2e] md:inline-flex">
+        <Link
+          href="/contact"
+          className="hidden rounded-full bg-brand-green px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#097a2e] hover:-translate-y-0.5 md:inline-flex"
+        >
           Start a project
         </Link>
 
-        <button type="button" aria-label="Toggle navigation" aria-expanded={open} onClick={() => setOpen(!open)} className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-800 md:hidden">
+        <button
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-800 transition hover:bg-slate-50 md:hidden"
+        >
           <span className="text-lg">{open ? "×" : "☰"}</span>
         </button>
       </div>
