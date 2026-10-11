@@ -40,58 +40,6 @@ const projects = [
     tags: ["Web App", "Gym", "Personal Project"],
     status: "completed",
   },
-  /*
-  {
-    img: "/assets/project10/one.png",
-    title: "Hand Gesture Recognition",
-    company: "National Textile University",
-    category: "AI",
-    description:
-      "CNN-based hand gesture classification on the LeapGestRecog dataset using TensorFlow/Keras for model training and evaluation.",
-    techStack: ["Python", "TensorFlow", "Keras", "OpenCV", "CNN"],
-    tags: ["AI", "Computer Vision", "Personal Project"],
-    status: "completed",
-  },
-  */
-  /*
-  {
-    img: "/assets/project1/one.png",
-    title: "Cause System",
-    company: "Prograsec",
-    category: "Web App",
-    description:
-      "Multi-tenant conversational AI platform with a Next.js studio frontend and Django backend. Supports document upload, RAG over vector and relational stores, LangGraph stateful agent workflows, and multi-provider LLM orchestration (OpenAI, Claude, Gemini, Groq, HuggingFace, Ollama, Vertex AI). Includes knowledge-graph reasoning with Neo4j, async task processing via Celery and Redis, BigQuery analytics, and agent tools for PDF, speech, translation, and spreadsheet operations.",
-    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "D3", "Framer Motion", "Django", "LangChain", "LangGraph", "Neo4j", "PostgreSQL", "Redis", "Celery", "BigQuery", "DRF", "Docker"],
-    tags: ["AI", "SaaS", "Web App", "Chatbot"],
-    status: "completed",
-  },
-  */
-  /*
-  {
-    img: "/assets/project2/one.png",
-    title: "Cause News",
-    company: "Prograsec",
-    category: "Web App",
-    description:
-      "AI fact-verification and credibility scoring platform with a Next.js frontend and FastAPI backend. Uses LangGraph agents and Model Context Protocol (MCP) to verify claims against live web sources, combining dense vector retrieval with BM25 keyword search. Stores and traverses claim-corroboration networks in Neo4j, visualizes entity relationships with D3 and Neo4j NVL, and renders evidence summaries with React Markdown.",
-    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "D3", "FastAPI", "Python", "LangChain", "LangGraph", "Neo4j", "NetworkX", "MCP", "React Markdown"],
-    tags: ["AI", "Web App", "RAG", "Fact Checking"],
-    status: "completed",
-  },
-  */
-  /*
-  {
-    img: "/assets/project3/one.png",
-    title: "NutriHygiene",
-    company: "Prograsec",
-    category: "Mobile App",
-    description:
-      "AI-powered clinical nutrition and wellness platform built across mobile, web, and admin surfaces. The React Native mobile app uses Expo, React Navigation, TanStack Query, and Firebase for chat, diet plans, meal tracking, water intake, weight stats, onboarding, and subscriptions. The Next.js marketing site and admin panel provide content pages, calculators, waitlist, subscription management, and PDF export. The FastAPI backend orchestrates LangChain/LangGraph agents, pgvector semantic search, Chroma, and PostgreSQL to generate personalized Pakistani meal plans, BMR analytics, and AI nutritionist conversations with streaming and OTP auth.",
-    techStack: ["React Native", "Expo", "Next.js", "FastAPI", "Python", "LangChain", "LangGraph", "PostgreSQL", "pgvector", "Chroma", "Firebase", "Tailwind CSS", "TanStack Query", "React Hook Form", "Zod"],
-    tags: ["AI", "Mobile App", "Nutrition", "Python"],
-    status: "completed",
-  },
-  */
   {
     img: "/assets/project5/one.jpeg",
     title: "LedgerFlow",
@@ -103,45 +51,6 @@ const projects = [
     tags: ["Custom Software", "ERP", "Accounting"],
     status: "in-progress",
   },
-  /*
-  {
-    img: "/assets/project6/one.png",
-    title: "ShopStack",
-    company: "Practice Project",
-    category: "Web App",
-    description:
-      "FastAPI microservices backend with product, user, auth, and order services, containerized with Docker and paired with a Next.js storefront.",
-    techStack: ["FastAPI", "Python", "Docker", "Next.js", "Kafka"],
-    tags: ["Web App", "E-Commerce", "Microservices", "Personal Project"],
-    status: "completed",
-  },
-  */
-  /*
-  {
-    img: "/assets/project7/one.png",
-    title: "QuickCart",
-    company: "Practice Project",
-    category: "Web App",
-    description:
-      "Django e-commerce platform with product catalog, category filtering, search, contact form, order placement, and tracking by order ID.",
-    techStack: ["Django", "Python", "SQLite", "HTML", "CSS", "JavaScript"],
-    tags: ["Web App", "E-Commerce", "Personal Project"],
-    status: "completed",
-  },
-  */
-  /*
-  {
-    img: "/assets/project8/one.png",
-    title: "DevJournal",
-    company: "Practice Project",
-    category: "Web App",
-    description:
-      "Django blog app with authentication, article publishing, nested comments, search, and contact flows.",
-    techStack: ["Django", "Python", "SQLite", "HTML", "CSS", "JavaScript"],
-    tags: ["Web App", "Blog", "Personal Project"],
-    status: "completed",
-  },
-  */
 ];
 
 const filters = ["All", "AI", "Web App", "Mobile App", "Custom Software"];
