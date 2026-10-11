@@ -208,9 +208,15 @@ function ProjectCard({ project }: { project: Project }) {
               {project.category}
             </span>
 
-            <span className="absolute top-3 right-3 rounded-full bg-slate-950/75 text-white backdrop-blur-md px-2.5 py-1 text-[11px] font-medium flex items-center gap-1 shadow-sm transition-transform duration-200 group-hover:scale-105">
-              <span>Flip</span>
-              <span className="text-xs">↻</span>
+            <span
+              className={`absolute top-3 right-3 rounded-full px-2.5 py-1 text-[11px] font-semibold flex items-center gap-1 shadow-sm backdrop-blur-md ${
+                project.status === "completed"
+                  ? "bg-emerald-500/90 text-white"
+                  : "bg-[#0b8b36]/90 text-white"
+              }`}
+            >
+              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-white/80" />
+              {project.status === "completed" ? "Completed" : "In Progress"}
             </span>
 
             <div className="flex-1 flex flex-col justify-between pt-4">
@@ -245,6 +251,20 @@ function ProjectCard({ project }: { project: Project }) {
               <div className="flex items-center gap-2">
                 <span className="soft-chip rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider">
                   {project.category}
+                </span>
+                <span
+                  className={`rounded-full px-2.5 py-1 text-[11px] font-semibold flex items-center gap-1.5 ${
+                    project.status === "completed"
+                      ? "bg-emerald-100 text-emerald-700"
+                      : "bg-[#0b8b36]/10 text-[#0b8b36]"
+                  }`}
+                >
+                  <span
+                    className={`inline-flex h-1.5 w-1.5 rounded-full ${
+                      project.status === "completed" ? "bg-emerald-500" : "bg-[#0b8b36]"
+                    }`}
+                  />
+                  {project.status === "completed" ? "Completed" : "In Progress"}
                 </span>
                 {project.company && (
                   <span className="text-xs text-slate-500 hidden sm:inline truncate max-w-[200px]">
