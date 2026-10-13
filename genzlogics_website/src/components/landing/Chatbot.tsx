@@ -62,7 +62,7 @@ export default function Chatbot() {
       const data = await response.json();
 
       if (!response.ok) {
-        let msg = data.message || "Something went wrong. Please try again.";
+        const msg = data.message || "Something went wrong. Please try again.";
         let severity: "error" | "warning" = "error";
         if (data.error === "unsupported_input" || data.error === "rate_limited" || data.error === "missing_api_key") {
           severity = "warning";

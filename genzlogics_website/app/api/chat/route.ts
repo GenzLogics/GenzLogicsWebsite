@@ -63,7 +63,7 @@ We build systems that can evolve with the business instead of becoming a one‑t
 ## Why Choose GenZLogics?
 - **End‑to‑end expertise** – from AI model orchestration to production‑ready cloud deployment.
 - **Multi‑provider LLM strategy** – we avoid vendor lock‑in and can switch or combine models on‑the‑fly.
-- **Modern tech stack** – all solutions are built with current, well‑supported frameworks (Next.js 14, FastAPI, React, TypeScript, Docker).
+- **Modern tech stack** - all solutions use current, supported frameworks (Next.js 14, FastAPI, React, TypeScript, Docker).
 - **Domain‑focused AI** – experience delivering AI‑powered finance, healthcare, education, and business‑process automation products.
 
 ## Contact Information

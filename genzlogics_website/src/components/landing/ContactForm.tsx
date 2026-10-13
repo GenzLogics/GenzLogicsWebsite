@@ -57,7 +57,7 @@ export default function ContactForm() {
       setService("");
       setMessage("");
       setSubmitted(true);
-    } catch (error) {
+    } catch {
       setError("Unable to send request. Please try again later.");
     } finally {
       setIsSubmitting(false);

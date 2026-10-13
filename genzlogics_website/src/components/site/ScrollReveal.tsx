@@ -26,7 +26,7 @@ export default function ScrollReveal() {
       return observer;
     };
 
-    let observer = observeElements(document.querySelectorAll<HTMLElement>(".reveal"));
+    const observer = observeElements(document.querySelectorAll<HTMLElement>(".reveal"));
 
     const mutationObserver = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
