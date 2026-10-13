@@ -49,7 +49,7 @@ const projects = [
       "Full-stack business accounting and ledger management system with a FastAPI backend and Next.js frontend. Covers customers, vendors, cash sales, sales and purchase invoices, stock control, expenses, investors, and automated reminders. Includes an analytics dashboard, PDF invoice export, form validation with React Hook Form and Zod, and Dockerized deployment.",
     techStack: ["FastAPI", "SQLAlchemy", "PostgreSQL", "Alembic", "Docker", "Next.js", "React", "TypeScript", "Tailwind CSS", "TanStack Query", "Axios", "React Hook Form", "Zod", "jsPDF"],
     tags: ["Custom Software", "ERP", "Accounting"],
-    status: "in-progress",
+    status: "completed",
   },
 ];
 
