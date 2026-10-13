@@ -1,28 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7fbf8;
-  --foreground: #0b1a12;
-  --brand-green: #0b8b36;
-  --brand-green-strong: #097a2e;
+  --background: #f4f8f5;
+  --foreground: #15251b;
+  --brand-green: #087b35;
+  --brand-green-strong: #06652b;
   --brand-black: #06140b;
-  --muted: #4b6354;
-  --line: rgba(11, 139, 54, 0.14);
-  --accent: #0b8b36;
-  --accent-soft: rgba(11, 139, 54, 0.12);
+  --muted: #52685a;
+  --line: rgba(8, 123, 53, 0.16);
+  --accent: #087b35;
+  --accent-soft: rgba(8, 123, 53, 0.11);
   --surface: #ffffff;
-  --surface-muted: #eef7f1;
+  --surface-muted: #eaf2ec;
   --surface-strong: #ffffff;
-  --border: rgba(11, 26, 18, 0.10);
-  --heading: #06140b;
+  --border: rgba(21, 53, 32, 0.12);
+  --heading: #102018;
   --inverse: #072010;
   --inverse-text: #f4faf6;
   --inverse-muted: #a8c4b3;
-  --shadow: 0 24px 80px rgba(6, 20, 11, 0.08);
-  --glow: rgba(11, 139, 54, 0.22);
-  --grid: rgba(11, 139, 54, 0.08);
-  --header-bg: rgba(247, 251, 248, 0.86);
-  --header-bg-scrolled: rgba(255, 255, 255, 0.92);
+  --shadow: 0 18px 55px rgba(20, 54, 32, 0.09), 0 3px 12px rgba(20, 54, 32, 0.04);
+  --glow: rgba(8, 123, 53, 0.20);
+  --grid: rgba(8, 123, 53, 0.09);
+  --header-bg: rgba(244, 248, 245, 0.88);
+  --header-bg-scrolled: rgba(250, 252, 250, 0.94);
 }
 
 .dark {
@@ -159,6 +159,16 @@ button, input, select, textarea {
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
   border-radius: 1.75rem;
+}
+
+html:not(.dark) .surface,
+html:not(.dark) .surface-strong {
+  background: linear-gradient(145deg, #ffffff 0%, #fbfdfb 58%, #f2f8f3 100%);
+  box-shadow: var(--shadow);
+}
+
+html:not(.dark) section.bg-surface-muted {
+  background-image: radial-gradient(ellipse at 8% 0%, rgba(8, 123, 53, 0.07), transparent 42%);
 }
 
 .soft-chip {
