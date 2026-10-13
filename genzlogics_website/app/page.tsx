@@ -76,7 +76,7 @@ export default function Home() {
 
           <div className="mt-12 grid gap-5 md:grid-cols-2">
             {services.map(([title, desc], index) => (
-              <Link key={title} href="/services" className="group card-lift surface block p-8 reveal" style={{ animationDelay: `${index * 120}ms` }}>
+              <Link key={title} href="/services" className="group service-card surface block p-8 reveal" style={{ animationDelay: `${index * 120}ms` }}>
                 <div className="flex items-center justify-between gap-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">0{index + 1}</p>
                   <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface-muted text-muted transition-all duration-300 group-hover:scale-105 group-hover:border-brand-green/30 group-hover:bg-brand-green group-hover:text-white">

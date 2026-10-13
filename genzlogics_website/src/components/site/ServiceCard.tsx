@@ -4,7 +4,7 @@ type Props = { title: string; description: string; number: string };
 
 export default function ServiceCard({ title, description, number }: Props) {
   return (
-    <Link href="/services" className="group card-lift surface block rounded-2xl p-7">
+    <Link href="/services" className="group service-card surface block rounded-2xl p-7">
       <div className="flex items-start justify-between gap-6">
         <span className="text-xs font-semibold tracking-widest text-muted">{number}</span>
         <span className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-surface-muted text-muted transition group-hover:translate-x-1 group-hover:border-brand-green/30 group-hover:bg-brand-green group-hover:text-white">↗</span>

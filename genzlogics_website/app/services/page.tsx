@@ -34,7 +34,7 @@ export default function ServicesPage() {
 
           <div className="mt-14 grid gap-5 md:grid-cols-2">
             {services.map(([title, description], index) => (
-              <article key={title} className="group card-lift surface p-7 reveal" style={{ animationDelay: `${index * 80}ms` }}>
+              <article key={title} className="group service-card surface p-7 reveal" style={{ animationDelay: `${index * 80}ms` }}>
                 <div className="flex items-center justify-between text-muted">
                   <span className="text-xs font-semibold uppercase tracking-[0.2em]">0{index + 1}</span>
                   <span className="transition group-hover:translate-x-1 group-hover:text-heading">↗</span>
