@@ -57,8 +57,8 @@ export default function Home() {
 
             <div className="reveal reveal-d4 mt-12 grid gap-4 sm:grid-cols-3">
               {metrics.map(([value, label]) => (
-                <div key={label} className="rounded-[1.2rem] border border-border bg-surface/80 px-4 py-4 backdrop-blur-sm">
-                  <div className="text-xl font-semibold tracking-tight text-heading">{value}</div>
+                <div key={label} className="metric-card rounded-[1.2rem] px-4 py-4 backdrop-blur-sm">
+                  <div className="metric-value text-xl font-semibold tracking-tight text-heading">{value}</div>
                   <div className="mt-2 text-xs leading-5 text-muted">{label}</div>
                 </div>
               ))}
@@ -131,7 +131,8 @@ export default function Home() {
             {process.map(([step, title, text]) => (
               <div
                 key={step}
-                className="card-lift rounded-[1.5rem] border border-white/10 bg-white/5 p-5 reveal"
+                className="process-card card-lift rounded-[1.5rem] border border-white/10 bg-white/5 p-5 reveal"
+                tabIndex={0}
                 style={{ animationDelay: `${220 + Number(step) * 120}ms` }}
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-green">{step}</p>
