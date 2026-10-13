@@ -136,7 +136,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="btn-primary disabled:cursor-not-allowed disabled:opacity-60"
+        className="btn-primary mt-2 px-8 py-3.5 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {isSubmitting ? "Sending..." : "Send message"}
       </button>

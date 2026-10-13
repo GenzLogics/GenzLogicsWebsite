@@ -145,7 +145,7 @@ export default function Home() {
 
       <section className="bg-background">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <div className="surface rounded-[2rem] p-8 sm:p-10 lg:p-14 reveal">
+          <div className="workflow-cta rounded-[2rem] p-8 sm:p-10 lg:p-14 reveal">
             <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-2xl">
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-brand-green">Let&apos;s build</p>

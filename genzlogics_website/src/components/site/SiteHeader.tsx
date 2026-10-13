@@ -46,7 +46,7 @@ export default function SiteHeader() {
 
         <div className="hidden items-center gap-3 md:flex">
           <ThemeToggle />
-          <Link href="/contact" className="btn-primary">
+          <Link href="/contact" className="btn-primary header-cta">
             Start a project
           </Link>
         </div>

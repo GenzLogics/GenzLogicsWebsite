@@ -18,7 +18,7 @@ export default function ContactPage() {
           </div>
 
           <div className="mt-14 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
-            <div className="surface rounded-[1.75rem] p-7">
+            <div className="contact-panel surface rounded-[1.75rem] p-7">
               <div className="space-y-7">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">Email</p>
@@ -41,7 +41,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="surface rounded-[1.75rem] p-7 sm:p-10">
+            <div className="contact-panel surface rounded-[1.75rem] p-7 sm:p-10">
               <ContactForm />
             </div>
           </div>

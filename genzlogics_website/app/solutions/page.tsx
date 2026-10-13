@@ -33,12 +33,12 @@ export default function SolutionsPage() {
             ))}
           </div>
 
-          <div className="mt-20 rounded-[2rem] border border-border bg-surface-muted p-8 sm:p-10 lg:p-14">
+          <div className="project-cta mt-20 rounded-[2rem] p-8 sm:p-10 lg:p-14">
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">Workflow mapping</p>
-                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-heading sm:text-4xl">Have a specific process in mind?</h2>
-                <p className="mt-4 max-w-xl text-sm leading-7 text-muted">
+                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-inverse-text sm:text-4xl">Have a specific process in mind?</h2>
+                <p className="mt-4 max-w-xl text-sm leading-7 text-inverse-muted">
                   We can help turn a messy workflow into a clear technical plan before the first build cycle begins.
                 </p>
               </div>
