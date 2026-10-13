@@ -222,6 +222,46 @@ html:not(.dark) section.bg-surface-muted {
   box-shadow: 0 28px 64px color-mix(in srgb, var(--accent) 25%, transparent), inset 0 0 0 1px color-mix(in srgb, var(--accent) 18%, transparent);
 }
 
+.service-carousel { --service-gap: 1.25rem; --service-step: calc((100% + var(--service-gap)) / 3); }
+.service-carousel-viewport { overflow: hidden; margin: -0.5rem; padding: 0.5rem; }
+.service-carousel-track { display: flex; gap: var(--service-gap); }
+.service-carousel-track.is-animated { transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+.service-carousel-card { flex: 0 0 calc((100% - (var(--service-gap) * 2)) / 3); min-height: 350px; padding: 1.75rem; }
+.service-carousel-control { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border: 1px solid var(--border); border-radius: 999px; color: var(--accent); background: var(--surface); transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease; }
+.service-carousel-control:hover { transform: translateY(-2px); border-color: var(--accent); background: var(--accent-soft); }
+.service-carousel-dot { width: 0.45rem; height: 0.45rem; padding: 0; border: 0; border-radius: 999px; background: var(--border); transition: width 0.25s ease, background 0.25s ease; }
+.service-carousel-dot.is-active { width: 1.5rem; background: var(--accent); }
+
+.project-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid rgba(85, 220, 126, 0.28);
+  background:
+    radial-gradient(600px 220px at 92% 0%, rgba(34, 197, 94, 0.24), transparent 62%),
+    linear-gradient(135deg, #041d0e 0%, #07381b 56%, #052814 100%);
+  box-shadow: 0 24px 70px rgba(3, 35, 16, 0.28), inset 0 1px 0 rgba(151, 255, 174, 0.12);
+}
+
+.project-cta::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.45;
+  background-image: linear-gradient(rgba(111, 239, 143, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(111, 239, 143, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse at 85% 20%, black, transparent 70%);
+}
+
+.project-cta .btn-primary { background: #22c55e; color: #03210f; box-shadow: 0 12px 30px rgba(34, 197, 94, 0.3); }
+
+@media (max-width: 900px) {
+  .service-carousel { --service-step: calc(100% + var(--service-gap)); }
+  .service-carousel-card { flex-basis: 100%; min-height: 320px; }
+}
+
 .service-card:hover::before,
 .service-card:focus-visible::before {
   opacity: 1;

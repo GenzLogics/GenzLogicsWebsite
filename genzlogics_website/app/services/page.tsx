@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PageShell from "@/src/components/site/PageShell";
+import ServiceCarousel from "@/src/components/site/ServiceCarousel";
 
 const services = [
   ["AI & Generative AI", "LLM applications, RAG systems, AI workflows, assistants, and automation that support real business tasks."],
@@ -32,20 +33,11 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="mt-14 grid gap-5 md:grid-cols-2">
-            {services.map(([title, description], index) => (
-              <article key={title} className="group service-card surface p-7 reveal" style={{ animationDelay: `${index * 80}ms` }}>
-                <div className="flex items-center justify-between text-muted">
-                  <span className="text-xs font-semibold uppercase tracking-[0.2em]">0{index + 1}</span>
-                  <span className="transition group-hover:translate-x-1 group-hover:text-heading">↗</span>
-                </div>
-                <h2 className="mt-8 text-2xl font-semibold tracking-tight text-heading">{title}</h2>
-                <p className="mt-4 text-sm leading-7 text-muted">{description}</p>
-              </article>
-            ))}
+          <div className="mt-14 reveal">
+            <ServiceCarousel services={services.map(([title, description]) => ({ title, description }))} />
           </div>
 
-          <div className="mt-20 rounded-[2rem] border border-white/10 bg-inverse p-8 text-inverse-text sm:p-10 lg:p-14">
+          <div className="project-cta mt-20 rounded-[2rem] p-8 text-inverse-text sm:p-10 lg:p-14">
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">Need clarity</p>
