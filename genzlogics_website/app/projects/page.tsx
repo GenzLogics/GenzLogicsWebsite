@@ -82,7 +82,7 @@ function ProjectCard({ project }: { project: Project }) {
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
         <div
-          className="absolute inset-0 w-full h-full surface rounded-[1.75rem] p-5 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:shadow-2xl hover:border-[#0b8b36]/40 backface-hidden group"
+          className="absolute inset-0 w-full h-full surface rounded-[1.75rem] p-5 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:shadow-2xl hover:border-brand-green/40 backface-hidden group"
         >
           <div className="relative w-full h-[220px] sm:h-[210px] rounded-[1.25rem] overflow-hidden bg-black/5" style={{ position: "relative" }}>
             {!imgError ? (
@@ -107,8 +107,8 @@ function ProjectCard({ project }: { project: Project }) {
                 <span className="project-image-label">View image</span>
               </button>
             ) : (
-              <div className="flex h-full w-full items-center justify-center bg-[#0b8b36]/10 p-4 text-center">
-                <span className="text-xl font-bold text-[#0b8b36]">{project.title}</span>
+              <div className="flex h-full w-full items-center justify-center bg-accent-soft p-4 text-center">
+                <span className="text-xl font-bold text-brand-green">{project.title}</span>
               </div>
             )}
           </div>
@@ -121,7 +121,7 @@ function ProjectCard({ project }: { project: Project }) {
               className={`absolute top-3 right-3 rounded-full px-2.5 py-1 text-[11px] font-semibold flex items-center gap-1 shadow-sm backdrop-blur-md ${
                 project.status === "completed"
                   ? "bg-emerald-500/90 text-white"
-                  : "bg-[#0b8b36]/90 text-white"
+                  : "bg-brand-green/90 text-white"
               }`}
             >
               <span className="inline-flex h-1.5 w-1.5 rounded-full bg-white/80" />
@@ -131,20 +131,20 @@ function ProjectCard({ project }: { project: Project }) {
             <div className="flex-1 flex flex-col justify-between pt-4">
             <div>
               {project.company && (
-                <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted">
                   {project.company}
                 </p>
               )}
-              <h3 className="text-xl font-bold tracking-tight text-slate-950 mt-1 line-clamp-2">
+              <h3 className="text-xl font-bold tracking-tight text-heading mt-1 line-clamp-2">
                 {project.title}
               </h3>
             </div>
 
-            <div className="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-[#0b8b36]">
+            <div className="mt-3 pt-3 border-t border-border flex items-center justify-between text-xs font-semibold text-brand-green">
               <span className="flex items-center gap-1.5 transition-transform duration-200 group-hover:translate-x-1">
                 Inspect Architecture & Stack <span className="text-sm leading-none">→</span>
               </span>
-              <span className="rounded-full bg-[#0b8b36]/10 px-2.5 py-1 text-[11px] text-[#0b8b36]">
+              <span className="rounded-full bg-accent-soft px-2.5 py-1 text-[11px] text-brand-green">
                 Click Card to Flip ↻
               </span>
             </div>
@@ -152,11 +152,11 @@ function ProjectCard({ project }: { project: Project }) {
         </div>
 
         <div
-          className="absolute inset-0 w-full h-full surface-strong rounded-[1.75rem] p-6 flex flex-col justify-between overflow-y-auto border border-slate-200 shadow-2xl backface-hidden"
+          className="absolute inset-0 w-full h-full surface-strong rounded-[1.75rem] p-6 flex flex-col justify-between overflow-y-auto border border-border shadow-2xl backface-hidden"
           style={{ transform: "rotateY(180deg)" }}
         >
           <div>
-            <div className="flex items-center justify-between gap-2 pb-3 border-b border-slate-100">
+            <div className="flex items-center justify-between gap-2 pb-3 border-b border-border">
               <div className="flex items-center gap-2">
                 <span className="soft-chip rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider">
                   {project.category}
@@ -164,8 +164,8 @@ function ProjectCard({ project }: { project: Project }) {
                 <span
                   className={`rounded-full px-2.5 py-1 text-[11px] font-semibold flex items-center gap-1.5 ${
                     project.status === "completed"
-                      ? "bg-emerald-100 text-emerald-700"
-                      : "bg-[#0b8b36]/10 text-[#0b8b36]"
+                      ? "bg-accent-soft text-brand-green"
+                      : "bg-accent-soft text-brand-green"
                   }`}
                 >
                   <span
@@ -176,35 +176,35 @@ function ProjectCard({ project }: { project: Project }) {
                   {project.status === "completed" ? "Completed" : "In Progress"}
                 </span>
                 {project.company && (
-                  <span className="text-xs text-slate-500 hidden sm:inline truncate max-w-[200px]">
+                  <span className="text-xs text-muted hidden sm:inline truncate max-w-[200px]">
                     • {project.company}
                   </span>
                 )}
               </div>
 
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-[#0b8b36]/10 text-[#0b8b36] px-3 py-1 text-xs font-semibold">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-accent-soft text-brand-green px-3 py-1 text-xs font-semibold">
                 <span>Image</span>
                 <span className="text-xs">↺</span>
               </span>
             </div>
 
-            <h3 className="text-lg sm:text-xl font-bold tracking-tight text-slate-950 mt-3">
+            <h3 className="text-lg sm:text-xl font-bold tracking-tight text-heading mt-3">
               {project.title}
             </h3>
 
-            <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+            <p className="text-xs sm:text-sm text-muted mt-2 leading-relaxed">
               {project.description}
             </p>
 
             <div className="mt-4">
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#0b8b36] mb-2">
+              <p className="text-xs font-semibold uppercase tracking-wider text-brand-green mb-2">
                 Tech Stack & Architecture
               </p>
               <div className="flex flex-wrap gap-1.5">
                 {project.techStack.map((tech, i) => (
                   <span
                     key={i}
-                    className="rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs text-slate-600 transition-colors hover:border-[#0b8b36] hover:text-[#0b8b36]"
+                    className="rounded-full border border-border bg-surface-muted px-2.5 py-1 text-xs text-muted transition-colors hover:border-brand-green hover:text-brand-green"
                   >
                     {tech}
                   </span>
@@ -213,8 +213,8 @@ function ProjectCard({ project }: { project: Project }) {
             </div>
           </div>
 
-          <div className="pt-4 mt-2 border-t border-slate-100 flex items-center justify-between">
-            <span className="text-xs font-semibold text-[#0b8b36] hover:underline transition-all">
+          <div className="pt-4 mt-2 border-t border-border flex items-center justify-between">
+            <span className="text-xs font-semibold text-brand-green hover:underline transition-all">
               Click Card to Flip Back ↺
             </span>
           </div>
@@ -270,24 +270,26 @@ export default function ProjectsPage() {
 
   return (
     <PageShell>
-      <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-24">
+      <div className="hero-canvas">
+        <span className="hero-orb right-[10%] top-[6%] h-60 w-60 bg-brand-green/16" />
+        <div className="hero-content mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-24">
         <div className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Projects</p>
-          <h1 className="mt-6 text-4xl font-semibold tracking-[-0.06em] text-slate-950 sm:text-5xl lg:text-6xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">Projects</p>
+          <h1 className="mt-6 text-4xl font-semibold tracking-[-0.06em] text-heading sm:text-5xl lg:text-6xl">
             Selected work across AI, software, and digital products.
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600">
+          <p className="mt-7 max-w-2xl text-lg leading-8 text-muted">
             Interactive project showcase: click any card to flip and inspect the system architecture,
             database models, and technology stack.
           </p>
         </div>
 
-        <div className="mt-6 flex flex-wrap gap-4 text-xs text-slate-500">
+        <div className="mt-6 flex flex-wrap gap-4 text-xs text-muted">
           <span className="inline-flex items-center gap-2">
-            <span className="inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />Completed
+            <span className="inline-flex h-2.5 w-2.5 rounded-full bg-brand-green" />Completed
           </span>
           <span className="inline-flex items-center gap-2">
-            <span className="inline-flex h-2.5 w-2.5 rounded-full bg-[#0b8b36]" />In Progress
+            <span className="inline-flex h-2.5 w-2.5 rounded-full bg-brand-green/60" />In Progress
           </span>
         </div>
 
@@ -299,8 +301,8 @@ export default function ProjectsPage() {
               onClick={() => setActiveFilter(filter)}
               className={`rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200 cursor-pointer ${
                 activeFilter === filter
-                  ? "border-[#0b8b36] bg-[#0b8b36] text-white shadow-md shadow-[#0b8b36]/15 scale-[1.03]"
-                  : "border-slate-200 bg-white text-slate-700 hover:border-[#0b8b36] hover:text-slate-950"
+                  ? "border-brand-green bg-brand-green text-white shadow-md shadow-[color:var(--glow)] scale-[1.03]"
+                  : "border-border bg-surface text-muted hover:border-brand-green hover:text-heading"
               }`}
             >
               {filter}
@@ -331,13 +333,14 @@ export default function ProjectsPage() {
         </motion.div>
 
         {filteredProjects.length === 0 && (
-          <p className="mt-12 text-center text-sm text-slate-500">No projects found for this filter.</p>
+          <p className="mt-12 text-center text-sm text-muted">No projects found for this filter.</p>
         )}
 
         <div className="mt-16">
-          <Link href="/contact" className="inline-flex rounded-full bg-[#0b8b36] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#097a2e]">
+          <Link href="/contact" className="btn-primary">
             Discuss your project →
           </Link>
+        </div>
         </div>
       </div>
     </PageShell>
