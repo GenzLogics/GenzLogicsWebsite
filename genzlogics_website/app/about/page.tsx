@@ -39,18 +39,18 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <div className="mt-20 rounded-[2rem] border border-border bg-surface-muted p-8 sm:p-10 lg:p-14">
+          <div className="project-cta mt-20 rounded-[2rem] p-8 text-inverse-text sm:p-10 lg:p-14">
             <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">Our approach</p>
-                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-heading sm:text-4xl">Simple process. Real outcomes.</h2>
+                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-inverse-text sm:text-4xl">Simple process. Real outcomes.</h2>
               </div>
 
               <div className="space-y-5">
                 {strengths.map(([title, text]) => (
-                  <div key={title} className="rounded-[1.25rem] border border-border bg-surface p-5">
-                    <h3 className="text-lg font-semibold text-heading">{title}</h3>
-                    <p className="mt-2 text-sm leading-7 text-muted">{text}</p>
+                  <div key={title} className="approach-item rounded-[1.25rem] p-5">
+                    <h3 className="text-lg font-semibold text-inverse-text">{title}</h3>
+                    <p className="mt-2 text-sm leading-7 text-inverse-muted">{text}</p>
                   </div>
                 ))}
               </div>
