@@ -31,7 +31,7 @@ export default function Chatbot() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [messages, setMessages] = useState<Array<{ role: string; content: string; severity?: string }>>([
-    { role: "assistant", content: "Hi! Ask about GenZLogics services, projects, or say **\"Tell me about GenZLogics\"** for an overview." },
+    { role: "assistant", content: "Hi! I can answer questions about GenZLogics services, projects, technologies, and company information." },
   ]);
   const bottomRef = useRef<HTMLDivElement>(null);
 
@@ -221,7 +221,7 @@ export default function Chatbot() {
               <input
                 value={input}
                 onChange={(event) => setInput(event.target.value)}
-                placeholder="Ask a question..."
+                placeholder="Ask about GenZLogics..."
                 className="min-w-0 flex-1 rounded-xl border border-[color:var(--border)] bg-transparent px-3.5 py-2 text-sm outline-none transition-colors focus:border-[color:var(--accent)]"
                 aria-label="Chat message"
               />

@@ -10,10 +10,10 @@ const projects = [
   {
     img: "/assets/project4/one.png",
     title: "AI-Powered Cryptocurrency Auto Trading Bot",
-    company: "Final Year Project - National Textile University",
+    sector: "FinTech - Algorithmic Trading Platform",
     category: "AI",
     description:
-      "Final year project: automated cryptocurrency trading bot for Binance Futures with a Next.js frontend and FastAPI backend. Encrypts user API keys, streams live market data, and runs async trading loops across configurable sessions with multiple strategies—trend following, breakout, momentum, and scalping—using SMA/RSI indicators. Supports leverage, risk-per-trade sizing, dynamic stop-loss/take-profit, start/stop bot controls, and order/trade history tracking with MongoDB persistence.",
+      "Automated cryptocurrency trading platform for Binance Futures, built with a Next.js frontend and FastAPI backend. Encrypts user API keys, streams live market data, and runs async trading sessions with trend-following, breakout, momentum, and scalping strategies using SMA/RSI indicators. Includes leverage controls, risk-based position sizing, dynamic stop-loss and take-profit, bot controls, and persistent order and trade history.",
     techStack: ["Python", "FastAPI", "Next.js", "React", "Tailwind CSS", "MongoDB", "python-binance", "pandas", "numpy", "WebSockets"],
     tags: ["AI", "Automation", "Trading Bot"],
     status: "completed",
@@ -21,29 +21,29 @@ const projects = [
   {
     img: "/assets/project9/one.jpeg",
     title: "FitPulse",
-    company: "National Textile University",
+    sector: "Digital Health - Fitness & Wellness",
     category: "Mobile App",
     description:
-      "Flutter fitness app with Firebase authentication and Firestore persistence. Implements email/password signup and login with password validation, plus role-based access for regular users and an admin dashboard for managing users and membership registrations. Offers three membership tiers—Standard, Ultimate, and Professional—with a validated registration flow. Includes dedicated screens for classes and trainer profiles, plus six in-app health calculators: BMI, calorie requirement, heart rate zones, ideal body weight, macronutrient breakdown, and water intake. Supports dark and light theme toggling.",
+      "Fitness and wellness app built with Flutter, Firebase Authentication, and Firestore. Provides secure account access, role-based permissions, membership management, and an admin dashboard. Members can choose from three membership tiers, browse classes and trainers, and use six health calculators covering BMI, calorie needs, heart-rate zones, ideal body weight, macronutrients, and hydration.",
     techStack: ["Flutter", "Dart", "Firebase", "Firebase Auth", "Cloud Firestore", "font_awesome_flutter", "google_fonts"],
-    tags: ["Mobile App", "Flutter", "Personal Project"],
+    tags: ["Mobile App", "Digital Health", "Fitness & Wellness"],
     status: "completed",
   },
   {
     img: "/assets/project11/one.jpeg",
     title: "FitPortal",
-    company: "National Textile University",
+    sector: "Fitness & Wellness - Membership Platform",
     category: "Web App",
     description:
       "Responsive gym membership and fitness portal built with Next.js 14 and Tailwind CSS. Features a landing page, classes catalog, trainer profiles, pricing tiers, and a validated membership registration form. Includes an admin dashboard for reviewing, editing, and deleting registrations, with MongoDB persistence via Mongoose and REST API routes.",
     techStack: ["Next.js", "React", "Tailwind CSS", "MongoDB", "Mongoose", "Framer Motion", "Swiper", "React Icons"],
-    tags: ["Web App", "Gym", "Personal Project"],
+    tags: ["Web App", "Membership Platform", "Fitness & Wellness"],
     status: "completed",
   },
   {
     img: "/assets/project5/one.jpeg",
     title: "LedgerFlow",
-    company: "Client Project",
+    sector: "Business Operations - Accounting & ERP",
     category: "Custom Software",
     description:
       "Full-stack business accounting and ledger management system with a FastAPI backend and Next.js frontend. Covers customers, vendors, cash sales, sales and purchase invoices, stock control, expenses, investors, and automated reminders. Includes an analytics dashboard, PDF invoice export, form validation with React Hook Form and Zod, and Dockerized deployment.",
@@ -130,9 +130,9 @@ function ProjectCard({ project }: { project: Project }) {
 
             <div className="flex-1 flex flex-col justify-between pt-4">
             <div>
-              {project.company && (
+              {project.sector && (
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted">
-                  {project.company}
+                  {project.sector}
                 </p>
               )}
               <h3 className="text-xl font-bold tracking-tight text-heading mt-1 line-clamp-2">
@@ -175,9 +175,9 @@ function ProjectCard({ project }: { project: Project }) {
                   />
                   {project.status === "completed" ? "Completed" : "In Progress"}
                 </span>
-                {project.company && (
+                {project.sector && (
                   <span className="text-xs text-muted hidden sm:inline truncate max-w-[200px]">
-                    • {project.company}
+                    • {project.sector}
                   </span>
                 )}
               </div>
