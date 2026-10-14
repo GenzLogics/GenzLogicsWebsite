@@ -30,7 +30,7 @@ export default function Chatbot() {
   });
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [messages, setMessages] = useState<Array<{ role: string; content: string; severity?: string }>>([
+  const [messages, setMessages] = useState<Array<{ role: string; content: string; severity?: string; sources?: string[] }>>([
     { role: "assistant", content: "Hi! I can answer questions about GenZLogics services, projects, technologies, and company information." },
   ]);
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -72,7 +72,14 @@ export default function Chatbot() {
         return;
       }
 
-      setMessages([...nextMessages, { role: "assistant", content: sanitizeMarkdown(data.message) }]);
+      setMessages([
+        ...nextMessages,
+        {
+          role: "assistant",
+          content: sanitizeMarkdown(data.message),
+          sources: Array.isArray(data.sources) ? data.sources.filter((source: unknown): source is string => typeof source === "string") : undefined,
+        },
+      ]);
     } catch {
       const msg = "Unable to reach the chatbot service. Please check your connection.";
       toast.error(msg);
@@ -204,6 +211,11 @@ export default function Chatbot() {
                   >
                     {message.content}
                   </ReactMarkdown>
+                  {!!message.sources?.length && (
+                    <p className="mt-2 border-t border-[color:var(--border)] pt-1.5 text-[10px] text-[color:var(--muted)]">
+                      Sources: {message.sources.join(" · ")}
+                    </p>
+                  )}
                 </div>
               ))}
               {loading && (
